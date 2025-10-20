@@ -1,0 +1,1 @@
+Estudos da lib "fastf1"
