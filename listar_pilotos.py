@@ -4,11 +4,11 @@ fastf1.Cache.enable_cache('cache')
 
 
 #Função para listar os pilotos
-def listar_pilotos(ano: int, gp: str):
+def listar_pilotos(ano: int, gp: str, m='R'):
 
     #Criando a sessão com os argumentos passados na função
     evento = fastf1.get_event(ano, gp)
-    session = evento.get_session('R') #Selecionando "race" que é a corrida
+    session = evento.get_session(m) #Selecionando "race" que é a corrida
     #Baixando os dados
     session.load()
 
@@ -36,4 +36,4 @@ def listar_pilotos(ano: int, gp: str):
 
 
 
-print(listar_pilotos(2025, 'Austin'))
+print(listar_pilotos(2025, 'Austin', 'R'))
